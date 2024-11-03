@@ -1,5 +1,5 @@
 import express from 'express';
-import { addFood, listFood, removeFood } from '../controllers/locationController.js';
+import { addlocation, listlocation, removelocation } from '../controllers/locationController.js';
 import multer from 'multer';
 const locationRouter = express.Router();
 
@@ -14,8 +14,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage})
 
-locationRouter.get("/list",listFood);
-locationRouter.post("/add",upload.single('image'),addFood);
-locationRouter.post("/remove",removeFood);
+locationRouter.get("/list",listlocation);
+locationRouter.post("/add",upload.single('image'),addlocation);
+locationRouter.post("/remove",removelocation);
 
 export default locationRouter;
