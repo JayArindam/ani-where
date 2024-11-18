@@ -1,22 +1,21 @@
-import foodModel from "../models/foodModel.js";
+import locationModel from "../models/locationModel.js";
 import fs from 'fs'
 
 const listlocation = async (req, res) => {
     try {
-        const foods = await foodModel.find({})
-        res.json({ success: true, data: foods })
+        const locations = await locationModel.find({})
+        res.json({ success: true, data: locations })
     } catch (error) {
         console.log(error);
         res.json({ success: false, message: "Error" })
     }
-
 }
 
 const addlocation = async (req, res) => {
 
     let image_filename = `${req.file.filename}`
 
-    const food = new foodModel({
+    const location = new locationModel({
         name: req.body.name,
         description: req.body.description,
         price: req.body.price,
@@ -24,8 +23,8 @@ const addlocation = async (req, res) => {
         image: image_filename,
     })
     try {
-        await food.save();
-        res.json({ success: true, message: "Food Added" })
+        await location.save();
+        res.json({ success: true, message: "Location Added" })
     } catch (error) {
         console.log(error);
         res.json({ success: false, message: "Error" })
@@ -35,11 +34,11 @@ const addlocation = async (req, res) => {
 const removelocation = async (req, res) => {
     try {
 
-        const food = await foodModel.findById(req.body.id);
-        fs.unlink(`uploads/${food.image}`, () => { })
+        const locations = await locationModel.findById(req.body.id);
+        fs.unlink(`uploads/${locations.image}`, () => { })
 
-        await foodModel.findByIdAndDelete(req.body.id)
-        res.json({ success: true, message: "Food Removed" })
+        await locationModel.findByIdAndDelete(req.body.id)
+        res.json({ success: true, message: "Location Removed" })
 
     } catch (error) {
         console.log(error);
