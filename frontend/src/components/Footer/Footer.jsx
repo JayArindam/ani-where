@@ -20,9 +20,10 @@ const Footer = () => {
         <div className="footer-content-center">
             <h2>COMPANY</h2>
             <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Privacy policy</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#footer">Contact Us</a></li>
+                <li><a href="/privacy-policy">Privacy policy</a></li>
             </ul>
         </div>
         <div className="footer-content-right">

@@ -52,6 +52,9 @@
     .header-contents{
         max-width: 45%;
     }
+    .header-contents h2{
+        margin-bottom: 10vh;
+    }
 }
 
 @media(max-width:750px){

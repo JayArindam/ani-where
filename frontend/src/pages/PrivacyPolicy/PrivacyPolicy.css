@@ -1,0 +1,27 @@
+.container {
+    max-width: 1000vh;
+    margin: 20px auto;
+    padding: 20px;
+    background: #361500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.519);
+  }
+  h1, h2 {
+    color: #CC9544;
+  }
+  ul {
+    margin-left: 20px;
+  }
+  a {
+    color: #CC9544;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+  }

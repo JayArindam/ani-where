@@ -4,21 +4,25 @@ import { assets } from '../../assets/assets';
 import { Link, useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../Context/StoreContext';
 
+
+// this is where the main goddamn navbar funtion starts 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
 
+  // as the name suggests this goddamn function is used to logout
   const logout = () => {
     localStorage.removeItem("token");
     setToken("");
     navigate('/');
   };
 
-  const handlePackagesClick = () => {
-    setMenu("packages");
-    navigate('/package');
-  };
+  // const handlePackagesClick = () => {
+  //   setMenu("packages");
+  //   navigate('/package');
+  // };
+  // we can use the above function if we have a new page and want to navigate to it with the help of out beloved navbar XD
 
   return (
     <div className='navbar'>
