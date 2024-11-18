@@ -1,0 +1,36 @@
+h1 {
+    color: #CC9544;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.1em;
+    margin: 15px 0;
+    color: white;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+    position: relative;
+  }
+
+  .ani-list {
+    font-size: 0.8rem;
+    color: white;
+  }
+  strong {
+    color: #CC9544;
+  }
+
+  em {
+    font-style: italic;
+    color: #CC9544;
+  }

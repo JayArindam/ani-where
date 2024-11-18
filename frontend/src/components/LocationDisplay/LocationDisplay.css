@@ -6,6 +6,11 @@
     font-weight: 600;    
     color: #CC9544;
 }
+
+h3 {
+    font-size: max(1vw,18px);
+    color: #CC9544;
+}
 .location-display-list{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

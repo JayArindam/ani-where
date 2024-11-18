@@ -9,7 +9,8 @@ const LocationDisplay = ({category}) => {
 
   return (
     <div className='location-display' id='location-display'>
-      <h2>Top places to explore...</h2>
+      <h2>Top places to explore...</h2> <br />
+      <h3>These are all our offerings... travel, food and stay is included in all the packages... </h3>
       <div className='location-display-list'>
         {location_list.map((item)=>{
           if (category==="All" || category===item.category) {
