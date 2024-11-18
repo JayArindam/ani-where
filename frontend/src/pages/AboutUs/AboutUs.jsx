@@ -3,6 +3,7 @@ import './AboutUs.css'
 function AboutUs () {
     return (
         <>
+        <div className='about-us' id='about-us'>
             <h1>About Us</h1>
             <p>At <strong>Aniwhere</strong>, we bring your anime fantasies to life through uniquely crafted travel packages. From soaking in traditional hot springs to exploring bustling cityscapes reminiscent of your favorite series, we’re all about blending wanderlust with a touch of otaku magic.</p>
 
@@ -17,7 +18,7 @@ function AboutUs () {
             </ul>
 
             <p>So pack your bags, charge your power levels, and let’s take you to a world where reality feels like a beautifully animated dream.</p>
-
+        </div>
         </>
     )
 }

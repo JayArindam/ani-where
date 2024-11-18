@@ -31,6 +31,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify/Verify';
 import Loli from './components/LoliDance/Loli';
 import PrivacyPolicy from './pages/PrivacyPolicy/privacypolicy'
+import AboutUs from './pages/AboutUs/AboutUs'
 
 const App = () => {
 
@@ -49,6 +50,7 @@ const App = () => {
           <Route path='/myorders' element={<MyOrders />}/>
           <Route path='/verify' element={<Verify />}/>
           <Route path='/privacy-policy' element={<PrivacyPolicy />}/>
+          <Route path='/about-us' element={<AboutUs />}/>
         </Routes>
       </div>
       <Loli />

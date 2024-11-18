@@ -1,9 +1,11 @@
 .navbar {
-    padding: 20px 0px;
+    padding: 2vh 5vh 0vh 5vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: #1c0a0066; /* Transparent black background */
+    backdrop-filter: blur(10px); /* Blur the background behind the navbar */
+    -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
 }
 
 .cart-img {
@@ -22,8 +24,9 @@
 .navbar-menu {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 50px;
     color: #603601;
+    margin-left: 0px;
     font-size: 18px;
 }
 
