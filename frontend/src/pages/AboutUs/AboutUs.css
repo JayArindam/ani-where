@@ -1,42 +1,66 @@
 .about-us {
-    background-color: #1C0A00;
-    padding: 50px ;
+  padding: 40px 20px;
+  background-color: #1C0A00; /* Soft, anime-themed background */
+  color: #CC9544;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.8;
 }
 
+.about-us h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #cc9544;
+}
 
-h1 {
-    color: #CC9544;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  flex: 1;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ani-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.ani-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.ani-list li::before {
+  content: '✨';
+  margin-right: 10px;
+  color: #ff4c24;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
   }
 
-  p {
-    font-size: 1.1em;
-    margin: 15px 0;
-    color: white;
+  .about-image {
+    max-width: 100%;
   }
 
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
+  .about-us h1 {
+    font-size: 2rem;
   }
-
-  ul li {
-    margin: 10px 0;
-    font-size: 1.1em;
-    position: relative;
-  }
-
-  .ani-list {
-    font-size: 0.8rem;
-    color: white;
-  }
-  strong {
-    color: #CC9544;
-  }
-
-  em {
-    font-style: italic;
-    color: #CC9544;
-  }
+}

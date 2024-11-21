@@ -38,7 +38,7 @@ const Cart = () => {
           <div>
             <div className="cart-total-details"><p>Subtotal</p><p>RS.{getTotalCartAmount()}</p></div>
             <hr />
-            <div className="cart-total-details"><p>Platform Fee</p><p>RS.{getTotalCartAmount()===0?0:5}</p></div>
+            <div className="cart-total-details"><p>Platform Fee</p><p>RS.{getTotalCartAmount()===0?0:500}</p></div>
             <hr />
             <div className="cart-total-details"><b>Total</b><b>RS.{getTotalCartAmount()===0?0:getTotalCartAmount()+500}</b></div>
           </div>
