@@ -10,7 +10,6 @@ import facebook_icon from './facebook_icon.png'
 import twitter_icon from './twitter_icon.png'
 import cross_icon from './cross_icon.png'
 import rating_starts from './rating_starts.png'
-import bag_icon from './bag_icon.png'
 import parcel_icon from './parcel_icon.png'
 
 import dance from './dance.gif'
@@ -29,7 +28,6 @@ export const assets = {
     facebook_icon,
     twitter_icon,
     cross_icon,
-    bag_icon,
     parcel_icon,
     dance
 }

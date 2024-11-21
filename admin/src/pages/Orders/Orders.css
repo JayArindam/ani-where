@@ -3,11 +3,10 @@
     grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
     align-items: start;
     gap: 30px;
-    border: 1px solid tomato;
+    border: 1px solid #603601;
     padding: 20px;
     margin: 30px 0px;
     font-size: 14px;
-    color: #505050;
 }
 .order-item-food,.order-item-name{
     font-weight: 600;
@@ -20,8 +19,8 @@
     margin-bottom: 10px;
 }
 .order-item select{
-    background-color: #ffe8e4;
-    border: 1px solid tomato;
+    background-color: #CC9544;
+    border: 1px solid #CC9544;
     width: max(10vw,120px);
     padding: 10px;
     outline:none;
