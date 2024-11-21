@@ -50,7 +50,7 @@ console.log(`
 
 
 app.use("/api/user", userRouter)
-app.use("/api/food", locationRouter)
+app.use("/api/location", locationRouter)
 app.use("/images",express.static('uploads'))
 app.use("/api/cart", cartRouter)
 app.use("/api/order",orderRouter)

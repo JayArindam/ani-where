@@ -45,7 +45,7 @@ const StoreContextProvider = (props) => {
     // Fetch location list (adjusted to correct API endpoint)
     const fetchLocationList = async () => {
         try {
-            const response = await axios.get(`${url}/api/food/list`); // Assuming /api/food/list is the correct endpoint
+            const response = await axios.get(`${url}/api/location/list`); // Assuming /api/food/list is the correct endpoint
             setLocationList(response.data.data); // Update location_list state with data from API
         } catch (error) {
             console.error("Failed to fetch location list", error);

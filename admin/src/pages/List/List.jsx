@@ -9,7 +9,7 @@ const List = () => {
   const [list,setList] = useState([]);
   
   const fetchList = async () => {
-    const response = await axios.get(`${url}/api/food/list`)
+    const response = await axios.get(`${url}/api/location/list`)
     if(response.data.success)
     {
       setList(response.data.data);
@@ -19,9 +19,9 @@ const List = () => {
     }
   }
 
-  const removeFood = async (foodId) => {
-    const response = await axios.post(`${url}/api/food/remove`,{
-      id:foodId
+  const removelocation = async (locationId) => {
+    const response = await axios.post(`${url}/api/location/remove`,{
+      id:locationId
     })
     await fetchList();
     if (response.data.success) {
@@ -38,7 +38,7 @@ const List = () => {
 
   return (
     <div className='list add flex-col'>
-        <p>All Foods List</p>
+        <p>All Location List</p>
         <div className='list-table'>
           <div className="list-table-format title">
             <b>Image</b>
@@ -54,7 +54,7 @@ const List = () => {
                 <p>{item.name}</p>
                 <p>{item.category}</p>
                 <p>RS.{item.price}</p>
-                <p className='cursor' onClick={()=>removeFood(item._id)}>x</p>
+                <p className='cursor' onClick={()=>removelocation(item._id)}>x</p>
               </div>
             )
           })}
