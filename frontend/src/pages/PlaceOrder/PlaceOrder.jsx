@@ -31,29 +31,38 @@ const PlaceOrder = () => {
     }
 
     const placeOrder = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
         let orderItems = [];
-        location_list.map(((item) => {
+        
+        // Constructing order items from cart data
+        location_list.forEach((item) => {
             if (cartItems[item._id] > 0) {
-                let itemInfo = item;
-                itemInfo["quantity"] = cartItems[item._id];
-                orderItems.push(itemInfo)
+                let itemInfo = { ...item, quantity: cartItems[item._id] };
+                orderItems.push(itemInfo);
             }
-        }))
-        let orderData = {
+        });
+    
+        const orderData = {
             address: data,
             items: orderItems,
             amount: getTotalCartAmount() + 5,
+        };
+    
+        try {
+            const response = await axios.post(url + "/api/order/place", orderData, { headers: { token } });
+            if (response.data.success) {
+                toast.success("Order placed successfully!");
+                setCartItems({}); // Clear the cart items
+                navigate("/"); // Redirect to home
+            } else {
+                toast.error("Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error placing order:", error);
+            toast.error("Error placing order. Please try again.");
         }
-        let response = await axios.post(url + "/api/order/place", orderData, { headers: { token } });
-        if (response.data.success) {
-            const { session_url } = response.data;
-            window.location.replace(session_url);
-        }
-        else {
-            toast.error("Something Went Wrong")
-        }
-    }
+    };
+    
 
     useEffect(() => {
         if (!token) {
@@ -91,7 +100,7 @@ const PlaceOrder = () => {
                     <div>
                         <div className="cart-total-details"><p>Subtotal</p><p>RS.{getTotalCartAmount()}</p></div>
                         <hr />
-                        <div className="cart-total-details"><p>Delivery Fee</p><p>RS.{getTotalCartAmount() === 0 ? 0 : 5}</p></div>
+                        <div className="cart-total-details"><p>Platform Fee</p><p>RS.{getTotalCartAmount() === 0 ? 0 : 5}</p></div>
                         <hr />
                         <div className="cart-total-details"><b>Total</b><b>RS.{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 5}</b></div>
                     </div>

@@ -23,6 +23,7 @@ const Add = () => {
         formData.append("price", Number(data.price));
         formData.append("category", data.category);
         formData.append("image", image);
+        formData.append("guide",data.guide);
         const response = await axios.post(`${url}/api/location/add`, formData);
         if (response.data.success) {
             toast.success(response.data.message);
@@ -89,15 +90,15 @@ const Add = () => {
                     />
                 </div>
 
-                {/* Additional URL */}
+                {/* Tour Guide */}
                 <div className="add-product-name flex-col">
-                    <p>More Information</p>
+                    <p>Tour Guide</p>
                     <input
-                        name="url"
+                        name="guide"
                         onChange={onChangeHandler}
-                        value={data.url || ""}
+                        value={data.guide || ""}
                         type="text"
-                        placeholder="Add relevant URLs"
+                        placeholder="Name of the tour guide"
                         required
                     />
                 </div>
@@ -125,7 +126,7 @@ const Add = () => {
 
                     {/* Price */}
                     <div className="add-price flex-col">
-                        <p>Product Price</p>
+                        <p>Package Price</p>
                         <input
                             type="number"
                             name="price"

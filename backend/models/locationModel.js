@@ -6,6 +6,7 @@ const locationSchema = new mongoose.Schema({
     price: { type: Number, required: true},
     image: { type: String, required: true },
     category:{ type:String, required:true},
+    guide:{type:String, required:true}
 })
 
 const locationModel = mongoose.models.packages || mongoose.model("packages", locationSchema);

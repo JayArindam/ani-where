@@ -1,5 +1,6 @@
 .my-orders{
-    margin: 50px 0px;
+    margin: 50px 50px;
+    color: #CC9544;
 }
 .my-orders .container{
     display: flex;
@@ -14,26 +15,26 @@
     gap: 30px;
     font-size: 14px;
     padding: 10px 20px;
-    color: #454545;
-    border: 1px solid tomato;
+    color: #CC9544;
+    border: 1px solid #CC9544;
 }
 .my-orders-order img{
     width: 50px;
 }
 .my-orders-order p span{
-    color: tomato;
+    color: #CC9544;
 }
 .my-orders-order p b{
     font-weight: 500;
-    color: #454545;
+    color: #CC9544;
 }
 .my-orders button{
     border: none;
     padding: 12px 0px;
     border-radius: 4px;
-    background-color: #FFE1E1;
+    background-color: #361500;
     cursor: pointer;
-    color: #454545;
+    color: #CC9544;
 }
 @media (max-width:900px) {
     .my-orders-order{

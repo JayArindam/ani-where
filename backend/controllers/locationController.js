@@ -20,6 +20,7 @@ const addlocation = async (req, res) => {
         description: req.body.description,
         price: req.body.price,
         category:req.body.category,
+        guide:req.body.guide,
         image: image_filename,
     })
     try {
