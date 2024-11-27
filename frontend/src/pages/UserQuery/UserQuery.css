@@ -1,0 +1,40 @@
+.query{
+    width: 70%;
+    margin-left: max(5vw,25px);
+    margin-top: 50px;
+    color: #CC9544;
+    font-size: 16px;
+}
+.query form{
+   gap: 20px;
+}
+.query-img-upload img{
+    width: 120px;
+}
+.query-product-name, .query-product-description{
+    width: max(40%,280px);
+}
+.query-product-name input ,.query-product-description textarea{
+    padding: 10px 10px;
+    background-color: #60350179;
+    color: #CC9544;
+}
+.query-category-price{
+    display: flex;
+    gap: 30px;
+}
+.query-category-price select,.query-category-price input{
+    max-width: 120px;
+    padding: 10px;
+    background-color: #60350179;
+    color: #CC9544;
+}
+.query-btn{
+    max-width: 120px;
+    border: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #603601;
+    color: #CC9544;
+    cursor: pointer;
+}

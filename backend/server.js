@@ -8,6 +8,7 @@ import locationRouter from "./routes/locationRoute.js"
 import 'dotenv/config'
 import cartRouter from "./routes/cartRoute.js"
 import orderRouter from "./routes/orderRoute.js"
+import queryRouter from "./routes/queryRoute.js"
 
 const app = express()
 const port = 4000
@@ -54,6 +55,7 @@ app.use("/api/location", locationRouter)
 app.use("/images",express.static('uploads'))
 app.use("/api/cart", cartRouter)
 app.use("/api/order",orderRouter)
+app.use("/api/query",queryRouter)
 
 app.get("/", (req, res) => {
     res.send("API Working")

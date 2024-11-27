@@ -32,6 +32,7 @@ import Verify from './pages/Verify/Verify';
 import Loli from './components/LoliDance/Loli';
 import PrivacyPolicy from './pages/PrivacyPolicy/privacypolicy'
 import AboutUs from './pages/AboutUs/AboutUs'
+import UserQuery from './pages/UserQuery/UserQuery'
 
 const App = () => {
 
@@ -51,6 +52,7 @@ const App = () => {
           <Route path='/verify' element={<Verify />}/>
           <Route path='/privacy-policy' element={<PrivacyPolicy />}/>
           <Route path='/about-us' element={<AboutUs />}/>
+          <Route path='/user-query' element={<UserQuery/> } />
         </Routes>
       </div>
       <Loli />
