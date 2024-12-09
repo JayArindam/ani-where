@@ -13,7 +13,6 @@ import queryRouter from "./routes/queryRoute.js"
 const app = express()
 const port = 4000
 
-
 app.use(express.json())
 app.use(cors())
 
@@ -22,7 +21,7 @@ connectDB()
 console.log(`
   Your aniwhere server will start shortly:
 
-  ⣴⣿⣿⣿⣿⠿⠟⢉⣚⣋⣴⣿⣿⣿⣿⠿⠟⠛⠛⣫⣥⣶⣶⣶⠶⠬⢭⡛⠻⣿⣿⣿⣿⣿⣿⠟⢊⠉⠲⢊⣩⣿⣿⣿⣿⣿⡏⣼⣿⣿
+⣴⣿⣿⣿⣿⠿⠟⢉⣚⣋⣴⣿⣿⣿⣿⠿⠟⠛⠛⣫⣥⣶⣶⣶⠶⠬⢭⡛⠻⣿⣿⣿⣿⣿⣿⠟⢊⠉⠲⢊⣩⣿⣿⣿⣿⣿⡏⣼⣿⣿
 ⣿⣿⣿⣿⡏⠀⣄⠀⠩⠛⠿⡿⢛⣩⠴⠶⢶⣶⣶⢛⣿⣿⣿⣷⡰⣭⣄⡈⢑⢦⣙⠿⠛⣉⠄⠀⣠⣾⡇⢹⠿⠟⣿⣿⣿⡿⢠⣿⣿⣿
 ⠁⠀⢀⣶⡏⠀⢿⣷⣄⡀⠀⠀⠉⠂⠀⣴⢾⡿⢃⣾⣿⣿⡿⢿⣷⠀⠻⣿⣶⣄⠩⠐⠀⠰⠄⠚⢿⣿⡇⠁⠀⣼⣿⣿⣿⡇⣾⣿⣿⣿
 ⣶⣤⣾⣿⡇⠀⢻⣿⠓⠀⠀⠀⢀⢄⣾⠃⡼⢁⣾⣿⣿⡟⠀⠀⣿⡀⡇⠀⠝⠻⣿⣄⠲⡄⠀⠀⣿⣿⠄⣸⣶⣿⣿⣿⡟⢸⣿⣿⣿⣿
