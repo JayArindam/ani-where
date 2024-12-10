@@ -4,7 +4,7 @@ import axios from "axios";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-    const url = "http://localhost:4000";
+    const url = "https://ani-where.onrender.com";
     const [location_list, setLocationList] = useState([]);
     const [cartItems, setCartItems] = useState({});
     const [token, setToken] = useState("");
@@ -45,7 +45,8 @@ const StoreContextProvider = (props) => {
     // Fetch location list (adjusted to correct API endpoint)
     const fetchLocationList = async () => {
         try {
-            const response = await axios.get(`${url}/api/location/list`); // Assuming /api/food/list is the correct endpoint
+            const response = await axios.get(`${url}/api/location/list`);
+            // console.log(response.data.data);
             setLocationList(response.data.data); // Update location_list state with data from API
         } catch (error) {
             console.error("Failed to fetch location list", error);
