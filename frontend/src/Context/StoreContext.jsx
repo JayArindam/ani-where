@@ -4,7 +4,7 @@ import axios from "axios";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-    const url = "https://ani-where-production.up.railway.app/";
+    const url = "http://localhost:4000";
     const [location_list, setLocationList] = useState([]);
     const [cartItems, setCartItems] = useState({});
     const [token, setToken] = useState("");
