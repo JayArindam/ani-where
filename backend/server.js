@@ -14,7 +14,14 @@ const app = express()
 const port = 4000
 
 app.use(express.json())
-app.use(cors(["http://localhost:5173", ""]))
+
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://ani-where-pi.vercel.app/"], // Replace with your actual allowed origins
+    credentials: true, // Optional, if you need to include cookies
+  })
+);
+
 
 connectDB()
 
