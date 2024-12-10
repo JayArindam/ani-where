@@ -13,7 +13,9 @@ export const connectDB = async () => {
   }
 
   try {
-    await mongoose.connect(mongoUri);
+    await mongoose.connect(mongoUri , {
+        retryWrites: true
+    });
     console.log("DB Connected");
   } catch (error) {
     console.error("DB Connection Error: ", error);
