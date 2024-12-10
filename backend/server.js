@@ -14,7 +14,7 @@ const app = express()
 const port = 4000
 
 app.use(express.json())
-app.use(cors())
+app.use(cors(["http://localhost:5173", ""]))
 
 connectDB()
 
